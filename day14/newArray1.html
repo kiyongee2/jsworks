@@ -38,12 +38,17 @@
         console.log(number[0] + number[1]);  //60
         console.log(number[1] > number[2]);  //true
 
-        //총점
-        let sumV = 0;  //총점을 저장할 변수
+        //총점과 평균 계산하기
+        let sumV = 0;    //총점을 저장할 변수
+        let avgV = 0.0;  //평균을 저장할 변수
         for(let i = 0; i < number.length; i++){
-            sumV = sumV + number[i];
+            sumV += number[i];  //sumV = sumV + number[i];
         }
+        // 평균 = 총점 / 개수
+        avgV = sumV / number.length;
+
         document.write("<br>총점 : " + sumV);
+        document.write("<br>평균 : " + avgV);
         /*
             i = 0, 10 = 0 + 10
             i = 1, 60 = 10 + 50
